@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+</head>
+<body>
+	<div class="col-sm-6">
+		<div class="content-box ">
+			<h2>test</h2>
+			<form method="post" th:action="@{/course}"
+					th:object="${courseData}">
+				<div class="input-group">
+				<dt>性別</dt>
+          <dd>
+            <select name="sex_class">
+              <option value="1">女</option>
+              <option value="0">男</option>
+            </select>
+          </dd>
+
+          <dt>履修コース</dt>
+          <dd>
+            <select name="couse_class">
+              <option value="0">IF</option>
+              <option value="1">PG</option>
+              <option value="2">SE</option>
+            </select>
+          </dd>
+  
+          <dt>偏差値</dt>
+          <dd><input type="number" name="deviation"></dd>
+          <dt>javaの点数</dt>
+          <dd><input type="number" name="java"></dd>
+          <dt>algoの点数</dt>
+          <dd><input type="number" name="algo"></dd>
+          <dt>oop1の点数</dt>
+          <dd><input type="number" name="oop1"></dd>
+          
+        </dl>
+        <br><button id="qButton">判定</button>
+        <div id="result"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
